@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="dist/main.js" defer></script>
+  <title>Lun Weather App</title>
+</head>
+<body class="margin-[0px] min-h-screen bg-[#eee] flex justify-center items-center">
+  <main class="w-[300px] h-max min-h-[300px] bg-[#f7f7f7] border rounded-[30px] shadow-[0_30px_50px_#333] p-[30px] box-border">
+    <form class="border border-solid border-[#5553] flex justify-between rounded-[10px]">
+         <input type="text" autocomplete="off" placeholder="Enter city name here ..." class="border-none bg-transparent outline-none p-[10px]" id="inputSearch"/>
+         <button class="border-none bg-transparent outline-none p-[10px]"><i class="fa-solid fa-magnifying-glass opacity-70"></i></button>
+    </form>
+    <h4 class="text-sm mt-[10px] text-red-400 font-medium italic text-center" id="weaErr"></h4>
+    <section class="pt-[20px] text-center">
+      <figure class="font-bold text-lg flex justify-center items-center gap-2.5" id="cityName">
+        <figcaption> Helsinki </figcaption>
+        <img src="https://flagsapi.com/TR/flat/32.png" alt=""/>
+      </figure>
+      <figure class="text-[3em]" id="weatherTemperature">
+        <img src="https://openweathermap.org/img/wn/10d@4x.png" class="w-[150px] filter drop-shadow-[0_10px_50px_#000] ml-[35px]" alt="" />
+        <figcaption class="relative">
+          <span id="figcaptionSpan">17</span>
+          <span class="absolute top-0 right-1/4 inline-block text-xl mr-2"> </span>
+        </figcaption>
+      </figure>
+      <p class="py-2 px-0 pb-10 text-lg font-medium text-zinc-700" id="weatherDescriptions"> Overcast clouds </p>
+      <ul class="list-none grid grid-cols-3 gap-2">
+        <li class="bg-indigo-100 text-[#fff] py-5 px-2.5 rounded-[10px] bg-gradient-to-b from-transparent to-indigo-400 font-bold text-sm">
+          <span>Clouds</span>
+          <i class="fa-solid fa-cloud text-[2em] !block mt-5 mb-0"></i>
+          <span id="clouds">88</span>%
+        </li>
+
+        <li class="bg-zinc-200 text-[#fff] py-5 px-2.5 rounded-[10px] bg-gradient-to-b from-transparent via-transparent to-zinc-500 font-bold text-sm">
+          <span>Humidity</span>
+          <i class="fa-solid fa-droplet text-[2em] !block mt-5 mb-0"></i>
+          <span id="humidity">45</span>%
+        </li>
+
+        <li class="bg-rose-100 text-[#fff] py-5 px-2.5 rounded-[10px] bg-[linear-gradient(to_bottom,_transparent,_#fb7185_50%)] font-bold text-sm">
+          <span>Pressure</span>
+          <i class="fa-solid fa-gauge text-[2em] !block mt-5 mb-0"></i>
+          <span id="pressure">1050</span>hPa
+        </li>
+      </ul>
+    </section>
+  </main>
+  
+</body>
+</html> 
